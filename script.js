@@ -153,8 +153,51 @@ function sayHello(name,age){
 }*/
 
 
-var res=mul(12,30);
+/*var res=mul(12,30);
 function mul(x,y){
   return x*y;
 }
 console.log(res);
+
+//normal function
+function add (a,b){
+  console.log(a+b);
+}
+add(10,20);
+
+//arrow function
+var add2=(a,b)=>{
+  console.log(a+b);
+};
+add2(102,20);
+
+//arrow function for single line parameters
+var add3=(a,b)=> console.log(a+b);
+add(30,20);*/
+
+
+var person={
+  name: "John Mac",
+  age:30,
+  isMarried:true,
+  address:{
+    street:'vijay nagar',
+    flatno: 201
+  }
+};
+console.log(person)
+
+
+
+var person1={
+  name: "John Mac",
+  age:30,
+  isMarried:true,
+  address:{
+    street:'vijay nagar',
+    flatno: 201
+  }
+};
+for (let x in person){
+  console.log("person details:"+ x +":" + person1[x]);
+}
