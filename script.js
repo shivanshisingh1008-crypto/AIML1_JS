@@ -1,4 +1,4 @@
-console.log("hello world");
+/*console.log("hello world");
 document.write("hello world");
 
 var num=10
@@ -74,16 +74,87 @@ for(count=0; count<10; count++){
   document.write("<br/>")
 
 }
-document.write("loop stopped");
+document.write("loop stopped");*/
 
 
+
+/*const person={
+  fname:"AJAY",
+  lname:"SINGH",
+  age:25,
+};
+for (let x in person){
+  console.log("personal details:"+ x +":" + person[x]);
+}
 
 const person={
   fname:"AJAY",
   lname:"SINGH",
-  age:25
+  age:25,
 };
 for (let x in person){
-  console.log("personal details:"+ x +":" + person[x])
+  console.log("personal details:"+ x +":" + person.x);
+}*/
+
+
+/*var count =0;
+console.log("starting loop");
+
+while(count<10){
+  console.log("current count :" + count +"<br/>");
+  count++;
+}
+console.log("loop stopped");*/
+
+
+
+/*var age=20;
+
+if(age>18){
+  console.log("<b> you are eligible to cast the vote.</b>");
+}
+else{
+  console.log("not eligible to vote");
+}*/
+
+
+/*let age=20;
+if (age>18){
+  console.log("you are not minor");
+}
+else{
+  console.log("you are minor");
 }
 
+
+var grade='B';
+console.log("entering switch block<br/>");
+switch(grade){
+  case 'A': console.log("good job<br/>");
+  break;
+  case 'B': console.log("pretty good<br/>");
+  break;
+  case 'C': console.log("passed<br/>");
+  break;
+  case 'D': console.log("not so good <br/>");
+  break;
+  case 'F': console.log("failed<br/>");
+  break;
+  default: console.log("unknown grade<br/>")
+}
+console.log("exiting switch block");
+
+function myFunction(){
+  alert("hello world")
+}
+
+function sayHello(name,age){
+  console.log(name + " is " + age +" year old");
+}*/
+
+
+var res=mul(12,30);
+function mul(x,y){
+  return x*y;
+}
+console.log(res);
