@@ -1,4 +1,4 @@
-/*console.log("hello world");
+console.log("hello world");
 document.write("hello world");
 
 var num=10
@@ -36,8 +36,7 @@ document.write(linebreak);
 
 
 
-
-
+//switch case
 var grade='B';
 console.log("entering switch block<br/>");
 switch(grade){
@@ -54,7 +53,3 @@ switch(grade){
   default: console.log("unknown grade<br/>")
 }
 console.log("exiting switch block");
-
-
-
-
