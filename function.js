@@ -4,7 +4,7 @@ function myFunction(){
 
 function sayHello(name,age){
   console.log(name + " is " + age +" year old");
-}*/
+}
 
 
 var res=mul(12,30);

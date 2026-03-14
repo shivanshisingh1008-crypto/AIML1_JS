@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <style>
+      
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 700px; margin: 20px auto; padding: 20px; 
+            background: #e0c4df; color: #333; line-height: 1.6;
+        }
+        h1 { color: #5a40c2; border-bottom: 3px solid #34495e; padding-bottom: 10px; }
+        input, select { 
+            padding: 10px; margin: 5px 0; border: 2px solid #bdc3c7; border-radius: 5px; 
+            width: 100%; font-size: 16px; background: white;
+        }
+        input:focus, select:focus { border-color: #3498db; outline: none; box-shadow: 0 0 5px rgba(52,152,219,0.3); }
+        button { 
+            padding: 12px 20px; margin: 8px 4px; border: none; border-radius: 5px; 
+            font-size: 16px; font-weight: bold; cursor: pointer; background: #3498db; color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        button:hover { background: #2980b9; transform: translateY(-1px); }
+        .btn-group { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px 0; }
+        #output { 
+            margin-top: 20px; padding: 20px; background: white; border: 1px solid #ddd; 
+            border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); min-height: 100px;
+        }
+        .employee-card { 
+            background: #ecf0f1; padding: 12px; margin: 8px 0; border-radius: 6px; 
+            border-left: 4px solid #3498db; font-family: monospace;
+        }
+        .high-salary { border-left-color: #27ae60; background: #d5f4e6; }
+        .total-box, .avg-box, .count-box { 
+            text-align: center; padding: 25px; margin: 10px 0; border-radius: 8px; font-size: 1.4em; font-weight: bold;
+        }
+        .total-box { background: #e8f8f5; border: 2px solid #27ae60; color: #27ae60; }
+        .avg-box { background: #fef9e7; border: 2px solid #f39c12; color: #e67e22; }
+        .count-box { background: #f8f9fa; border: 2px solid #7f8c8d; color: #34495e; }
+        @media (max-width: 600px) { body { padding: 10px; } button { width: 100%; } }
+    </style>
+</head>
+<body>
+    <h1>Employee Management System</h1>
+    
+    <form style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div>
+                <label>Name:</label><br>
+                <input type="text" id="name" placeholder="Enter employee name">
+            </div>
+            <div>
+                <label>Emp ID:</label><br>
+                <input type="text" id="empid" placeholder="E001">
+            </div>
+        </div>
+        <div style="margin-top: 15px;">
+            <label>Salary (in rupees):</label><br>
+            <input type="number" id="salary" placeholder="50000">
+        </div>
+        <div style="margin-top: 15px;">
+            <label>Department:</label><br>
+            <select id="department">
+                <option value="">Select Department</option>
+                <option value="IT">IT</option>
+                <option value="HR">HR</option>
+                <option value="Finance">Finance</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+        </div>
+        <button type="button" onclick="addemployee()" style="width: 100%; margin-top: 20px; background: #27ae60;">Add Employee</button>
+    </form>
+
+    <div class="btn-group">
+        <button onclick="displayEmployees()">Display All Data</button>
+        <button onclick="filterSalary()"> Salary > 50k</button>
+        <button onclick="totalSalary()">Total Salary</button>
+        <button onclick="avgSalary()"> Average Salary</button>
+        <button onclick="countDept()">IT Count</button>
+    </div>
+
+    <div id="output">Click "Add Employee" then use function buttons to see results.</div>
+
+    
+  <script src="./experiment2.js"></script>
+</body>
+</html>
