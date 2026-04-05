@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="myH1" class="democlass"> The Element Object</h1>
+<p id="demo"> </p>
+<script>
+
+const element = document.getElementById("myH1");
+let text= element.getAttribute("class");
+document.getElementById("demo").innerHTML=text;
+</script>
+
+<h1 id="myH1"> THE Element Object</h1>
+<script>
+function myfunction(){
+  document.getElementById("myH1").setAttribute("class", "democlass");
+} 
+</script>
+
+
+<h2> DOM CLOSE METHOD</h2>
+<button onclick="practice()">submit</button> 
+<script>
+function practice(){
+  document.open();
+  document.write("<h1>practice</h1>");
+  document.close();
+}
+</script>
+
+
+<h2 id="text">Hi user!</h2>
+
+<script>
+const x=document.queryselector('input');
+x.addEventListener('focus', onhandlefocus);
+x.addEventListener('blur', onhandlefocus);
+
+functiononhandlefocus(){x.style.background="red";}
+
+function
+onhandleblur(){x.style.backgroung="yellow";
+  x.style.borderColor="blue";
+}
+
+</body>
+</html>
+
+
+
+ 
