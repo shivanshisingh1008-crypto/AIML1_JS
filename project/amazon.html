@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Clone UI</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#eaeded;
+    }
+
+    .navbar{
+      background:#131921;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:10px 20px;
+      gap:15px;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:bold;
+      color:white;
+    }
+
+    .logo span{
+      font-size:18px;
+      font-weight:normal;
+    }
+
+    .address{
+      font-size:12px;
+      line-height:1.2;
+    }
+
+    .address strong{
+      display:block;
+      font-size:14px;
+    }
+
+    .search-box{
+      flex:1;
+      display:flex;
+      height:40px;
+      border-radius:4px;
+      overflow:hidden;
+    }
+
+    .search-box select{
+      width:60px;
+      border:none;
+      padding:5px;
+      background:#f3f3f3;
+    }
+
+    .search-box input{
+      flex:1;
+      border:none;
+      padding:10px;
+      font-size:15px;
+    }
+
+    .search-box button{
+      width:50px;
+      border:none;
+      background:#febd69;
+      font-size:20px;
+      cursor:pointer;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:20px;
+      font-size:13px;
+    }
+
+    .nav-links div strong{
+      display:block;
+      font-size:14px;
+    }
+
+    .menu-bar{
+      background:#232f3e;
+      color:white;
+      display:flex;
+      gap:20px;
+      padding:10px 20px;
+      font-size:14px;
+      overflow-x:auto;
+    }
+
+    .hero{
+      position:relative;
+      height:350px;
+      background:linear-gradient(to bottom,#79866f,#40453d);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      overflow:hidden;
+    }
+
+    .hero-content{
+      width:80%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:48px;
+      margin-bottom:10px;
+    }
+
+    .hero-text p{
+      font-size:28px;
+      line-height:1.3;
+    }
+
+    .hero-text small{
+      display:block;
+      margin-top:15px;
+      font-size:22px;
+    }
+
+    .hero-image{
+      width:280px;
+      height:260px;
+      background:linear-gradient(135deg,#bbb,#666);
+      border-radius:12px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .arrow{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      font-size:40px;
+      color:white;
+      cursor:pointer;
+      user-select:none;
+      padding:10px;
+    }
+
+    .left-arrow{ left:20px; }
+    .right-arrow{ right:20px; }
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+      padding:20px;
+      margin-top:-80px;
+      position:relative;
+      z-index:2;
+    }
+
+    .box{
+      background:white;
+      padding:20px;
+      min-height:380px;
+    }
+
+    .box h2{
+      font-size:22px;
+      margin-bottom:15px;
+    }
+
+    .box-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    .item{
+      font-size:13px;
+    }
+
+    .item-image{
+      width:100%;
+      height:110px;
+      background:linear-gradient(135deg,#ddd,#bbb);
+      margin-bottom:6px;
+    }
+
+    @media(max-width:1100px){
+      .products{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:768px){
+      .navbar{
+        flex-wrap:wrap;
+      }
+
+      .nav-links,
+      .address{
+        display:none;
+      }
+
+      .products{
+        grid-template-columns:1fr;
+        margin-top:0;
+      }
+
+      .hero{
+        height:auto;
+        padding:40px 20px;
+      }
+
+      .hero-content{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:36px;
+      }
+
+      .hero-text p{
+        font-size:22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">amazon<span>.in</span></div>
+
+    <div class="address">
+      Delivering to Ghaziabad 201009
+      <strong>Update location</strong>
+    </div>
+
+    <div class="search-box">
+      <select>
+        <option>All</option>
+      </select>
+      <input type="text" placeholder="Search Amazon.in">
+      <button>🔍</button>
+    </div>
+
+    <div class="nav-links">
+      <div>EN</div>
+      <div>Hello, sign in<strong>Account & Lists</strong></div>
+      <div>Returns<strong>& Orders</strong></div>
+      <div>🛒<strong>Cart</strong></div>
+    </div>
+  </div>
+
+  <div class="menu-bar">
+    <div>☰ All</div>
+    <div>Fresh</div>
+    <div>MX Player</div>
+    <div>Sell</div>
+    <div>Bestsellers</div>
+    <div>Mobiles</div>
+    <div>Customer Service</div>
+    <div>Today's Deals</div>
+    <div>New Releases</div>
+    <div>Prime</div>
+    <div>Fashion</div>
+    <div>Electronics</div>
+    <div>Home & Kitchen</div>
+    <div>Books</div>
+    <div>Toys & Games</div>
+  </div>
+
+  <div class="hero" id="hero">
+    <div class="arrow left-arrow" onclick="prevSlide()">❮</div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 id="heroTitle">Starting ₹99</h1>
+        <p id="heroText">Bestselling mobile accessories</p>
+        <small id="heroSub">Wide Selection | Top Brands</small>
+      </div>
+      <div class="hero-image"></div>
+    </div>
+
+    <div class="arrow right-arrow" onclick="nextSlide()">❯</div>
+  </div>
+
+  <div class="products">
+    <div class="box">
+      <h2>Appliances for your home | Up to 55% off</h2>
+      <div class="box-grid">
+        <div class="item"><div class="item-image"></div>Air conditioners</div>
+        <div class="item"><div class="item-image"></div>Refrigerators</div>
+        <div class="item"><div class="item-image"></div>Microwaves</div>
+        <div class="item"><div class="item-image"></div>Washing machines</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>Revamp your home in style</h2>
+      <div class="box-grid">
+        <div class="item"><div class="item-image"></div>Cushion covers</div>
+        <div class="item"><div class="item-image"></div>Figurines, vases & more</div>
+        <div class="item"><div class="item-image"></div>Home storage</div>
+        <div class="item"><div class="item-image"></div>Lighting solutions</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>Bulk order discounts + Up to 18% GST savings</h2>
+      <div class="box-grid">
+        <div class="item"><div class="item-image"></div>Laptops</div>
+        <div class="item"><div class="item-image"></div>Kitchen appliances</div>
+        <div class="item"><div class="item-image"></div>Office chairs</div>
+        <div class="item"><div class="item-image"></div>Business supplies</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>Starting ₹49 | Deals on home essentials</h2>
+      <div class="box-grid">
+        <div class="item"><div class="item-image"></div>Cleaning supplies</div>
+        <div class="item"><div class="item-image"></div>Bathroom accessories</div>
+        <div class="item"><div class="item-image"></div>Home tools</div>
+        <div class="item"><div class="item-image"></div>Wall decor</div>
+      </div>
+    </div>
+  </div>
+  <script src="./amazon.js"></script>
+</body>
+</html>
